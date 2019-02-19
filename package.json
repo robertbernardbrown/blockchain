@@ -1,0 +1,22 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "Starting a new blockchain project since the other one didn't have much coverage",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertbernardbrown/blockchain.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertbernardbrown/blockchain/issues"
+  },
+  "homepage": "https://github.com/robertbernardbrown/blockchain#readme",
+  "dependencies": {
+    "crypto.js": "^1.2.0"
+  }
+}
