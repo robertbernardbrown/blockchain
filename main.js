@@ -58,6 +58,7 @@ blockchain.addBlock(new Block(2, { amount: 10 }))
 console.log('Is it valid: ', blockchain.isChainValid());
 blockchain.addBlock(new Block(3, { amount: 10 }))
 blockchain.addBlock(new Block(4, { amount: 10 }))
+blockchain.addBlock(new Block(4, { amount: 10 }))
 let goodHash = blockchain.chain[1].hash;
 console.log(goodHash);
 blockchain.chain[1].data = 300;
