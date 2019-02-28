@@ -96,18 +96,18 @@ class Blockchain {
 
 let blockchain = new Blockchain();
 
-blockchain.createTransaction(new Transaction('address1', 'address2', 200));
-blockchain.createTransaction(new Transaction('address2', 'address1', 50));
+// blockchain.createTransaction(new Transaction('address1', 'address2', 200));
+// blockchain.createTransaction(new Transaction('address2', 'address1', 50));
 
-console.log('\n Starting the miner');
+// console.log('\n Starting the miner');
 
-blockchain.minePendingTransactions('bob_address');
+// blockchain.minePendingTransactions('bob_address');
 
-console.log('\n Balance of Bob is: ', blockchain.getBalanceOfAddress('bob_address'));
+// console.log('\n Balance of Bob is: ', blockchain.getBalanceOfAddress('bob_address'));
 
-blockchain.minePendingTransactions('bob_address');
+// blockchain.minePendingTransactions('bob_address');
 
-console.log('\n Balance of Bob is: ', blockchain.getBalanceOfAddress('bob_address'));
+// console.log('\n Balance of Bob is: ', blockchain.getBalanceOfAddress('bob_address'));
 
 // used to test blockchain with POW
 // console.log("Mining block 1...")
