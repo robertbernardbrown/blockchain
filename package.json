@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/robertbernardbrown/blockchain#readme",
   "dependencies": {
-    "crypto.js": "^1.2.0"
+    "crypto.js": "^1.2.0",
+    "elliptic": "^6.4.1"
   }
 }

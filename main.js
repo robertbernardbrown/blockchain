@@ -2,6 +2,8 @@ const { Blockchain, Transaction } = require('./blockchain');
 
 let blockchain = new Blockchain();
 
+console.log(blockchain);
+
 // blockchain.createTransaction(new Transaction('address1', 'address2', 200));
 // blockchain.createTransaction(new Transaction('address2', 'address1', 50));
 
