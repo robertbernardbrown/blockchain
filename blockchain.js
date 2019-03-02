@@ -53,6 +53,15 @@ class Block {
     }
     console.log("Block mined:", this.hash);
   }
+
+  hasValidTransaction() {
+    for(const tx of this.transactions) {
+      if(!tx.isValid()) {
+        return false;
+      }
+      return true;
+    }
+  }
 }
 
 class Blockchain {
@@ -82,7 +91,16 @@ class Blockchain {
     ];
   }
 
-  createTransaction(transaction) {
+  addTransaction(transaction) {
+
+    if(!transaction.fromAddress || !transaction.toAddress) {
+      return new Error('Transaction must have from and to address');
+    }
+
+    if(!transaction.isValid){
+      throw new Error('Cannot add invalid transaction to the chain');
+    }
+
     this.pendingTransactions.push(transaction);
   }
 
@@ -105,6 +123,10 @@ class Blockchain {
     for(let i = 1; i < this.chain.length; i++) {
       const currentBlock = this.chain[i];
       const previousBlock = this.chain[i - 1];
+
+      if (!currentBlock.hasValidTransaction()) {
+        return false;
+      }
 
       if (currentBlock.hash !== currentBlock.calculateHash()){
         return false;
