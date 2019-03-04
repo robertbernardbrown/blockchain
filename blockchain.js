@@ -36,7 +36,7 @@ class Transaction {
 class Block {
   constructor(transactions, previousHash = '') {
     this.timestamp = new Date();
-    this.previousHash = previousHash
+    this.previousHash = previousHash;
     this.transactions = transactions;
     this.hash = '';
     this.nonce = 0;
