@@ -16,12 +16,16 @@ blockchain.addTransaction(tx1);
 console.log('Starting the miner: ')
 blockchain.minePendingTransactions(myWalletAddress);
 
+console.log('Starting the miner: ')
+blockchain.minePendingTransactions('billy');
+
 console.log('\n Balance of Bob is: ', blockchain.getBalanceOfAddress(myWalletAddress));
 
 console.log('Starting the miner: ')
 blockchain.minePendingTransactions(myWalletAddress);
 
 console.log('\n Balance of Bob is: ', blockchain.getBalanceOfAddress(myWalletAddress));
+console.log('\n Balance of billy is: ', blockchain.getBalanceOfAddress('billy'));
 console.log('Is chain valid: ', blockchain.isChainValid());
 
 // below was testing mining code
