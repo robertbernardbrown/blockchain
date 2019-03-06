@@ -9,12 +9,12 @@ class Transaction {
     this.amount = amount;
   }
 
-  calculateHash(){
+  calculateHash() {
     return SHA256(this.fromAddress + this.toAddress + this.amount).toString();
   }
 
-  signTransaction(signingKey){
-    if (signingKey.getPublic('hex') !== this.fromAddress){
+  signTransaction(signingKey) {
+    if (signingKey.getPublic('hex') !== this.fromAddress) {
       throw new Error('You cannot sign transactions to other wallets!');
     }
 
@@ -23,9 +23,9 @@ class Transaction {
     this.signature = sig.toDER('hex');
   }
 
-  isValid(){
-    if(this.fromAddress === null) return true;
-    if(!this.signature || this.signature.length === 0) {
+  isValid() {
+    if (this.fromAddress === null) return true;
+    if (!this.signature || this.signature.length === 0) {
       throw new Error('No signature in this transaction!');
     }
     const publicKey = ec.keyFromPublic(this.fromAddress, 'hex');
